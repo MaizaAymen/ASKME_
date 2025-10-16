@@ -6,7 +6,9 @@ const authRoutes = require('./routes/authRoutes');
 
 // Initialize app
 const app = express();
-
+app.use(cors(
+  { origin: '*' }
+)); 
 // Connect database (handled safely inside the function)
 connectDB();
 
